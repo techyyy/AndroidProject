@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "11448197736",
+    "firebase_url": "https://money-mngr-98f9d.firebaseio.com",
+    "project_id": "money-mngr-98f9d",
+    "storage_bucket": "money-mngr-98f9d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:11448197736:android:9dd9342d71b4a485d551dd",
+        "android_client_info": {
+          "package_name": "android.example.moneymngr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "11448197736-almj8pv9dp5dmd4qa7inmo0v79ituhka.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "android.example.moneymngr",
+            "certificate_hash": "eb0750913cd9c8bee63d52df0dcbafcd790b7962"
+          }
+        },
+        {
+          "client_id": "11448197736-isfk0kpr70ag9o6hpcsdj2p9kf8pa9ou.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZbDeFjGj6CIRr3-tKVhGeWV6jG52WyJA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "11448197736-isfk0kpr70ag9o6hpcsdj2p9kf8pa9ou.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:layout_height="match_parent"
+    android:background="#EDC218"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:gravity="center"
+                    android:text="@string/money_mngr"
+                    android:textSize="32sp"
+                    android:textColor="#705239"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textStyle="italic" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:hint="@string/e_mail"
+                    android:id="@+id/login_email" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:hint="@string/password"
+                    android:id="@+id/login_password"
+                    android:inputType="textPassword"/>
+
+                <Button
+                    android:id="@+id/signin_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:background="#EDC218"
+                    android:text="@string/sign_in"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textAppearance="?android:textAppearanceLarge"/>
+
+                <TextView
+                    android:id="@+id/forgot_pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#EDC218"
+                    android:text="@string/forgot_password"
+                    android:padding="5dp" />
+                <TextView
+                    android:id="@+id/signup_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#EDC218"
+                    android:text="@string/don_t_have_an_account_yet_sign_up_here"
+                    android:padding="5dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

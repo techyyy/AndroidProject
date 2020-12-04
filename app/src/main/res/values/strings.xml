@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Money Mngr</string>
+    <string name="sign_up">Sign up!</string>
+    <string name="password">Password</string>
+    <string name="e_mail">E-mail</string>
+    <string name="money_mngr">Money Mngr</string>
+    <string name="sign_in">Sign in</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="don_t_have_an_account_yet_sign_up_here">Don\'t have an account yet? Sign up here!</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="income">Income</string>
+    <string name="expense">Expense</string>
+    <string name="navigation_drawer_open">Open navigation drawer.</string>
+    <string name="navigation_drawer_close">Close navigation drawer.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment"></string>
+    <string name="_000_00">000.00</string>
+    <string name="save">Save</string>
+    <string name="note">Note:</string>
+    <string name="amount">Amount:</string>
+    <string name="type">Type:</string>
+    <string name="cancel">Cancel</string>
+</resources>
