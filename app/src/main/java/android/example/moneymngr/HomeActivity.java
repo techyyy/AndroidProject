@@ -26,6 +26,10 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     private IncomeFragment incomeFragment;
     private ExpenseFragment expenseFragment;
 
+    /** OnCreate operations
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +57,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         setFragment(dashBoardFragment);
 
+        // Initializing fragments
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
@@ -76,6 +81,11 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         });
     }
 
+    /** Switching to selected fragment
+     *
+     * @param fragment
+     */
+
     private void setFragment(Fragment fragment) {
 
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
@@ -84,6 +94,10 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
     }
 
+
+    /** Managing DrawerLayout
+     *
+     */
     @Override
     public void onBackPressed(){
         DrawerLayout drawerLayout=findViewById(R.id.drawer_layout);
@@ -94,6 +108,11 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         }
     }
 
+
+    /** Displays chosen item
+     *
+     * @param itemId
+     */
     public void displaySelectedListener(int itemId){
         Fragment fragment=null;
 
@@ -119,6 +138,11 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout.closeDrawer(GravityCompat.START);
     }
 
+    /** Calls displaySelectedListener after choosing an item
+     *
+     * @param menuItem
+     * @return
+     */
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         displaySelectedListener(menuItem.getItemId());

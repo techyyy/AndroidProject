@@ -56,6 +56,12 @@ public class DashBoardFragment extends Fragment {
     private RecyclerView mRecyclerIncome;
     private RecyclerView mRecyclerExpense;
 
+    /** OnCreate operations
+     * @param inflater
+     * @param container
+     * @param savedInstanceState
+     * @return
+     */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -86,6 +92,7 @@ public class DashBoardFragment extends Fragment {
         FadeOpen= AnimationUtils.loadAnimation(getActivity(), R.anim.fade_open);
         FadeClose= AnimationUtils.loadAnimation(getActivity(), R.anim.fade_close);
 
+        // Manages adding button
         fab_main_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -119,6 +126,7 @@ public class DashBoardFragment extends Fragment {
             }
         });
 
+        // Showing income sum
         mIncomeDatabase.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -145,7 +153,7 @@ public class DashBoardFragment extends Fragment {
             }
         });
 
-
+        // Showing expense sum
         mExpenseDatabase.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -177,6 +185,10 @@ public class DashBoardFragment extends Fragment {
         return myview;
     }
 
+    /**
+     * Calls insertion functions
+     */
+
     private void addData(){
         fab_income_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -193,6 +205,9 @@ public class DashBoardFragment extends Fragment {
         });
     }
 
+    /** Shows income adding dialog after "+" button was pressed
+     *
+     */
     public void incomeDataInsert(){
         AlertDialog.Builder mydialog = new AlertDialog.Builder(getActivity());
 
@@ -210,6 +225,7 @@ public class DashBoardFragment extends Fragment {
         Button btnSave = myview.findViewById(R.id.btnSave);
         Button btnCancel = myview.findViewById(R.id.btnCancel);
 
+        // Showing dialog and collecting all the data
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -226,6 +242,8 @@ public class DashBoardFragment extends Fragment {
                     editAmount.setError("Is required field");
                     return;
                 }
+
+                // Adding to the Firebase
 
                 int myAmountToInt = Integer.parseInt(amount);
 
@@ -256,6 +274,9 @@ public class DashBoardFragment extends Fragment {
 
     }
 
+    /** Shows expense adding dialog after "-" button was pressed
+     *
+     */
     public void expenseDataInsert(){
         AlertDialog.Builder mydialog = new AlertDialog.Builder(getActivity());
         LayoutInflater inflater = LayoutInflater.from(getActivity());
@@ -269,7 +290,7 @@ public class DashBoardFragment extends Fragment {
 
         Button btnSave = myview.findViewById(R.id.btnSave);
         Button btnCancel = myview.findViewById(R.id.btnCancel);
-
+        // Showing dialog and collecting all the data
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -286,6 +307,8 @@ public class DashBoardFragment extends Fragment {
                     editAmount.setError("Is required field");
                     return;
                 }
+
+                // Adding to the Firebase
 
                 int myAmountToInt = Integer.parseInt(amount);
 
@@ -316,6 +339,9 @@ public class DashBoardFragment extends Fragment {
 
     }
 
+    /** Retrieving database info
+     *
+     */
     @Override
     public void onStart() {
         super.onStart();
@@ -360,8 +386,6 @@ public class DashBoardFragment extends Fragment {
 
     }
 
-    //For Income Data
-
     public static class IncomeViewHolder extends RecyclerView.ViewHolder{
 
         View mIncomeView;
@@ -394,7 +418,6 @@ public class DashBoardFragment extends Fragment {
 
     }
 
-    //For expense data..
 
     public static class ExpenseViewHolder extends RecyclerView.ViewHolder{
 

@@ -52,7 +52,13 @@ public class IncomeFragment extends Fragment {
     private String post_key;
 
 
-
+    /** OnCreate operations
+     *
+     * @param inflater
+     * @param container
+     * @param savedInstanceState
+     * @return
+     */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -77,6 +83,7 @@ public class IncomeFragment extends Fragment {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(layoutManager);
 
+        // Shows income sum
 
         mIncomeDatabase.addValueEventListener(new ValueEventListener() {
             @Override
@@ -110,6 +117,11 @@ public class IncomeFragment extends Fragment {
         return myview;
     }
 
+     /**
+        Showing all the incomes added
+        as RecyclerView.
+        Data is being taken from database.
+    */
 
     @Override
     public void onStart() {
@@ -188,7 +200,9 @@ public class IncomeFragment extends Fragment {
 
     }
 
-
+    /** Updating income item. Shows dialog when any recyclerView item is pressed
+     *
+     */
     private void updateDataItem(){
 
         AlertDialog.Builder mydialog=new AlertDialog.Builder(getActivity());

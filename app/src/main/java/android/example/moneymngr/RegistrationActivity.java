@@ -15,6 +15,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.firebase.client.Firebase;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -29,6 +30,10 @@ public class RegistrationActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
 
+    /** OnCreate operations
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +44,14 @@ public class RegistrationActivity extends AppCompatActivity {
         mDialog = new ProgressDialog(this);
         registration();
     }
+
+    /**
+        Collecting registration data.
+        Sends registration request to Firebase after pressing btnReg and having collected all the data,
+        otherwise registration error is being showed.
+     */
+
+
 
     private void registration(){
         mEmail = findViewById(R.id.reg_email);

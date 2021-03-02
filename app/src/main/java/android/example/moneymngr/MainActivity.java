@@ -18,6 +18,12 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+/**
+* @version 1.0.0
+* @author Yurii Horobets(techyyy)
+* Entry activity. Shows log-in window with buttons to switch to registration or to reset activities.
+* */
+
 public class MainActivity extends AppCompatActivity {
     private EditText mEmail;
     private EditText mPass;
@@ -29,6 +35,9 @@ public class MainActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
 
+    /**
+     * OnCreate operations.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +51,12 @@ public class MainActivity extends AppCompatActivity {
         loginDetails();
 
     }
+
+    /**
+        Collecting log-in data.
+        Sends authentication request to Firebase after pressing btnLogin and having collected all the data,
+        otherwise log-in error is being showed.
+    */
 
     private void loginDetails(){
         mEmail = findViewById(R.id.login_email);
@@ -87,12 +102,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // Switch to registration
+
         mSignUpHere.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(), RegistrationActivity.class));
             }
         });
+
+        // Switch to resetting
 
         mForgotPass.setOnClickListener(new View.OnClickListener() {
             @Override
