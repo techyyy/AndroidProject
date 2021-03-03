@@ -138,8 +138,7 @@
                         android:layout_width="match_parent"
                         android:text="@string/cancel"
                         android:textAppearance="?android:textAppearanceMedium"
-                        android:textColor="@android:color/white"
-                        android:background="#FFBFAFAF"
+                        android:textColor="@android:color/black"
                         android:id="@+id/btnCancel"
                         android:layout_height="wrap_content" />
 
@@ -156,8 +155,7 @@
                         android:layout_width="match_parent"
                         android:text="@string/save"
                         android:textAppearance="?android:textAppearanceMedium"
-                        android:textColor="@android:color/white"
-                        android:background="#FFBFAFAF"
+                        android:textColor="@android:color/black"
                         android:id="@+id/btnSave"
                         android:layout_height="wrap_content" />
 
