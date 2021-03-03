@@ -1,0 +1,3 @@
+# MoneyMngr
+
+index.html - documentation
